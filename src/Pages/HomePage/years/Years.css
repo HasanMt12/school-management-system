@@ -1,0 +1,10 @@
+.year-section {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.12), rgba(38, 2, 51, 0.576)), url("https://studentlife.utk.edu/wp-content/uploads/2019/01/student_union_interior_020.jpg");
+    background-size: cover;
+    width: 100%;
+}
+
+.year-style:hover {
+    background-color: rgba(32, 0, 57, 0.582);
+    transition: background-color .5s;
+}

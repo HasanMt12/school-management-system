@@ -1,0 +1,9 @@
+.slider {
+    background: linear-gradient(to right, rgb(1, 0, 3), rgba(27, 1, 144, 0.725), rgb(1, 0, 3));
+    /* height: 350px; */
+}
+
+.slide {
+    background-color: transparent !important;
+
+}

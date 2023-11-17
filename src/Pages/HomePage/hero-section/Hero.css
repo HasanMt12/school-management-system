@@ -1,0 +1,6 @@
+.hero-section {
+    background: linear-gradient(to right, rgba(3, 0, 18, 0.085), rgba(89, 0, 172, 0.365)), url("https://dig8.files.wordpress.com/2013/01/arch-purple.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+}

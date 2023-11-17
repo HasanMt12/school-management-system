@@ -1,0 +1,146 @@
+.culture-section {
+    background: linear-gradient(to right, rgba(3, 0, 18, 0.085), rgba(89, 0, 172, 0.365)), url("https://www.gettingsmart.com/wp-content/uploads/2018/03/Project-based-classroom-students-library-Feature-Image.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px 0;
+}
+
+.center-styles {
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    transform: translate(-50%, -50%);
+    line-height: 35px;
+    display: inline-block;
+    margin-top: 50px;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.about-section {
+    height: 100vh;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-1 {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.297), rgba(22, 1, 44, 0.742)), url("https://co.stci.uk/sites/stcico.bangladesh.savethechildren.net/files/styles/full_width_landscape/public/p54-01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide-2 {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.297), rgba(0, 0, 0, 0.742)), url("https://www.justaddwaterswimming.com/wp-content/uploads/2018/06/athlete-exercise-fitness-261185-scaled.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide-3 {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.297), rgba(0, 0, 0, 0.742)), url("https://wpvip.edutopia.org/wp-content/uploads/2022/11/F7JHMM-crop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide-4 {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.297), rgba(0, 0, 0, 0.742)), url("https://thesportsschool.b-cdn.net/wp-content/uploads/2020/05/SHA_6498-min-scaled-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.button-container {
+    position: relative;
+}
+
+
+.buttons {
+    font-size: 13px;
+    font-weight: 600;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(255, 234, 255);
+    padding: 0px 30px;
+    border-left: 3px solid rgb(255, 234, 255);
+    border-right: 3px solid rgb(255, 234, 255);
+}
+
+.bdrs {
+    display: block;
+    height: 3px;
+    background-color: rgb(255, 234, 255);
+    position: absolute;
+}
+
+
+.bdrs1 {
+    top: -2px;
+    left: 0px;
+    width: 15%;
+    transition: .3s;
+}
+
+.bdrs2 {
+    top: -2px;
+    right: 0px;
+    width: 75%;
+    transition: .3s;
+}
+
+.bdrs3 {
+    bottom: -3px;
+    left: 0px;
+    width: 75%;
+    transition: .3s;
+}
+
+.bdrs4 {
+    bottom: -3px;
+    right: 0px;
+    width: 15%;
+    transition: .3s;
+}
+
+.center-styles:hover .bdrs1 {
+    width: 75%;
+}
+
+.center-styles:hover .bdrs2 {
+    width: 15%;
+}
+
+.center-styles:hover .bdrs3 {
+    width: 15%;
+}
+
+.center-styles:hover .bdrs4 {
+    width: 75%;
+}
