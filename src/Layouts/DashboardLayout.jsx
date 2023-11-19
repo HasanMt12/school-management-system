@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import Navbar from "../Shared/Navbar";
+import Navbar from "../Shared/DashboardNavbar";
 import SideBar from "../Shared/SideBar";
 
 const DashboardLayout = () => {

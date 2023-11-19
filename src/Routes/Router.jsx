@@ -3,6 +3,7 @@ import MainLayout from "../Layouts/MainLayout";
 import DashboardLayout from "../Layouts/DashboardLayout";
 import DashboardHome from "../Dashboard/DashboardHome";
 import Home from "../Pages/HomePage/Home";
+import AdminLogin from "../components/AdminLogin";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/login",
+        element: <AdminLogin/>
       },
     ],
   },

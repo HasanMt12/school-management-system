@@ -4,18 +4,18 @@ import './index.css'
 import('preline')
 
 import { Provider } from 'react-redux'
-import { applyMiddleware, createStore } from 'redux'
+import {  createStore } from 'redux'
 import rootReducer from './reducers'
 import { composeWithDevTools } from 'redux-devtools-extension'
- import thunk from 'redux-thunk'
+//  import thunk from 'redux-thunk'
 
 
-const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(thunk))
-);
+// const store = createStore(
+//   rootReducer,
+//   composeWithDevTools(applyMiddleware(thunk))
+// );
 
-// const store = createStore(rootReducer,composeWithDevTools());
+const store = createStore(rootReducer,composeWithDevTools());
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
