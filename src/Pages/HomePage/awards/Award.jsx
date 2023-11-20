@@ -8,11 +8,14 @@ import 'swiper/css/free-mode';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { useSelector } from 'react-redux';
 
 const Award = () => {
+      const {auth} = useSelector(state=>({...state}))
+      console.log(auth)
     return (
         <div className='h-[50%] slider py-16 text-center border border-gray-600 border-x-0'>
-            <h2 className='text-white text-center lg:text-2xl md:text-xl text-lg'>THE BRIGHTEST OF SPARKS</h2>
+            <h2 className='text-white text-center lg:text-2xl md:text-xl text-lg'>{auth.email}THE BRIGHTEST OF SPARKS</h2>
 
             <Swiper  navigation={true} modules={[Navigation]}
                 breakpoints={{

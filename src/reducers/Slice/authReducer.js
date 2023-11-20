@@ -8,13 +8,10 @@ token:null
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
     case actionType.LOGIN:
-      return {
-        payload:action.payload
-      };
+  return action.payload;
+
     case actionType.LOGOUT:
-      return {
-        payload:initialState
-      };
+      return action.payload;
     default:
       return state;
   }

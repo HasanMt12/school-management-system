@@ -4,6 +4,9 @@ import DashboardLayout from "../Layouts/DashboardLayout";
 import DashboardHome from "../Dashboard/DashboardHome";
 import Home from "../Pages/HomePage/Home";
 import AdminLogin from "../components/AdminLogin";
+import AdminRoutes from "./AdminRoute";
+
+
 
 const router = createBrowserRouter([
   {
@@ -19,24 +22,33 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
       },
-      {
-        path: "/login",
-        element: <AdminLogin/>
-      },
     ],
   },
 
    {
-      path: '/dashboard',
-      element: <DashboardLayout></DashboardLayout>, 
+      path: '/dashboard/admin',
+      element: <AdminRoutes />, 
       children: [
         {
-        path: "/dashboard",
+        path: "/dashboard/admin",
         element: <DashboardHome></DashboardHome>
         },
       ]
     },
-  
+    {
+      path: '/dashboard/student',
+      element: <AdminRoutes />, 
+      children: [
+        {
+        path: "/dashboard/admin",
+        element: <DashboardHome></DashboardHome>
+        },
+      ]
+    },
+   {
+        path: "/login",
+        element: <AdminLogin/>
+      },
 ]);
 
 export default router;
