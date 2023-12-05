@@ -1,11 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layouts/MainLayout";
-import DashboardLayout from "../Layouts/DashboardLayout";
 import DashboardHome from "../Dashboard/DashboardHome";
 import Home from "../Pages/HomePage/Home";
+import Login from "../components/Login";
 import AdminLogin from "../components/AdminLogin";
-import AdminRoutes from "./AdminRoute";
-
+import DashboardLayout from "../Layouts/DashboardLayout";
 
 
 const router = createBrowserRouter([
@@ -20,35 +19,30 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>,
+        element:<Home></Home>,
+      },
+        {
+        path: "/login",
+        element:  <Login></Login>,
+      },
+        {
+        path: "/admin/login",
+        element: <AdminLogin/>,
       },
     ],
   },
 
    {
       path: '/dashboard/admin',
-      element: <AdminRoutes />, 
+      element: <DashboardLayout />,
       children: [
         {
         path: "/dashboard/admin",
-        element: <DashboardHome></DashboardHome>
+        element: <DashboardHome />
         },
       ]
     },
-    {
-      path: '/dashboard/student',
-      element: <AdminRoutes />, 
-      children: [
-        {
-        path: "/dashboard/admin",
-        element: <DashboardHome></DashboardHome>
-        },
-      ]
-    },
-   {
-        path: "/login",
-        element: <AdminLogin/>
-      },
+   
 ]);
 
 export default router;

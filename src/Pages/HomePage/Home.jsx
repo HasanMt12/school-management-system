@@ -11,16 +11,44 @@ import './Home.css';
 import Years from './years/Years';
 import { LuSparkle } from 'react-icons/lu';
 import News from './events/News';
-
+import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout } from "../../store/actions/userLogout.js";
 const Home = () => {
 
-    
+  const dispatch = useDispatch();
+  const userState = useSelector((state) => state.admin);
+  // Logout handler dispatches the logout action
+   const logoutHandler = () => {
+   dispatch(logout());
 
+  };
   return (
     <div className='containers'>
       <div className='relative'>
         <div className="sections">
           <Hero />
+           <div className='absolute z-10 top-10 right-10 bg-white px-6 py-2 cursor-pointer font-serif font-semibold rounded-lg '><Link to="/login">login </Link> 
+           </div>
+           {userState?.userInfo? ( 
+            <div className="flex flex-col justify-center items-center gap-2">
+           
+             <div  className='absolute z-10 top-20 right-10 bg-white px-6 py-2 cursor-pointer font-serif font-semibold rounded-lg'>
+              <Link to="/dashboard/admin"> Admin Dashboard</Link>
+              </div> 
+
+           <div  onClick={logoutHandler} className='absolute z-10 top-20 right-10 bg-white px-6 py-2 cursor-pointer font-serif font-semibold rounded-lg'> Admin Logout
+           </div>
+            </div>
+          ):
+           (
+         
+            <div 
+          className='absolute z-10 top-20 right-10 bg-white px-6 py-2 cursor-pointer font-serif font-semibold rounded-lg'><Link to="/admin/login">Admin Login </Link> 
+           </div>
+          
+           )}
+            
           <div className='divider absolute left-[50%] bottom-0'></div>
         </div>
 

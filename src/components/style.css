@@ -1,0 +1,26 @@
+/* Style for the TabList container */
+.custom-tab-list {
+    /* Add any additional styles you want for the TabList container */
+}
+
+/* Style for each individual Tab */
+.custom-tab {
+    /* Add styles for each tab */
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    /* You can customize other styles as needed */
+}
+
+/* Style for the selected Tab */
+.custom-tab.react-tabs__tab--selected {
+    background-color: #457B9D;
+    color: #ffffff;
+    border: none;
+    /* Add any additional styles for the selected tab */
+}

@@ -1,9 +1,22 @@
 
-import { Link } from "react-router-dom";
-
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { logout } from "../store/actions/userLogout.js";
+import { useEffect } from "react";
 const Navbar = () => {
-
- 
+  const navigate = useNavigate()
+  const dispatch = useDispatch();
+    const userState = useSelector((state) => state.admin);
+    // Logout handler dispatches the logout action
+    const logoutHandler = () => {
+    dispatch(logout());
+  };
+   useEffect(() => {
+    if (!userState?.userInfo) {
+      navigate("/");
+    }
+  }, [navigate, userState.userInfo]);
+ console.log(userState?.userInfo)
     return (
         <nav className="flex basis-full items-center w-full mx-auto px-4 sm:px-6 md:px-8" aria-label="Global">
           <div className="mr-5 lg:mr-0 lg:hidden">
@@ -33,14 +46,14 @@ const Navbar = () => {
                     <p className="text-sm font-medium text-gray-800">sample</p>
                   </div>
                   <div className="mt-2 py-2 first:pt-0 last:pb-0">
-                   
-                      <>
-                        <button 
-                          className="flex justify-center items-center gap-2 w-full text-pink-500  tracking-wide font-[Montserrat] bg-sky-50 rounded border-pink-500 border-b-[1px] lg:p-1 p-[3px] lg:text-sm md:text-xs text-[10px] font-medium transition hover:scale-105"
+                     {userState?.userInfo?( 
+                        <button onClick={logoutHandler} 
+                          className="flex justify-center items-center gap-2 w-full text-gray-600  tracking-wide font-[Montserrat] bg-sky-50 rounded border-pink-500 border-b-[1px] lg:p-1 p-[3px] lg:text-sm md:text-xs text-[10px] font-medium transition hover:scale-105"
                         >
                       log out
                         </button>
-                      </>
+                      ):(<h2>login</h2>)}
+                    
                   </div>
                 </div>
               </div>
